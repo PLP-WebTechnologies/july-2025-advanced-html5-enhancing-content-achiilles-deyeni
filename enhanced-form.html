@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced HTML5 Page with Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+      }
+      header,
+      main,
+      footer {
+        max-width: 900px;
+        margin: auto;
+        padding: 1rem;
+      }
+      h1,
+      h2 {
+        color: #333;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1.5rem;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #aaa;
+      }
+      th,
+      td {
+        padding: 0.6rem;
+        text-align: left;
+      }
+      fieldset {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+      }
+      legend {
+        font-weight: bold;
+      }
+      label {
+        display: block;
+        margin-top: 0.5rem;
+        font-weight: bold;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 0.5rem;
+        margin-top: 0.2rem;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        width: auto;
+        margin-top: 1rem;
+        cursor: pointer;
+      }
+      img,
+      video {
+        max-width: 100%;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>HTML5 Advanced Content and Form</h1>
+      <p>
+        This page demonstrates the use of lists, tables, media, and a
+        well-structured HTML5 form with native validation.
+      </p>
+    </header>
+
+    <main>
+      <!-- Lists -->
+      <section>
+        <h2>Popular Web Development Technologies</h2>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Python</li>
+          <li>SQL Databases</li>
+        </ul>
+      </section>
+
+      <!-- Table -->
+      <section>
+        <h2>Sample Course Schedule</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Course</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>HTML & CSS</td>
+              <td>9:00 AM - 11:00 AM</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>JavaScript Basics</td>
+              <td>1:00 PM - 3:00 PM</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>Python for Web</td>
+              <td>10:00 AM - 12:00 PM</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Media -->
+      <section>
+        <h2>Learning in Action</h2>
+        <figure>
+          <img
+            src="https://via.placeholder.com/800x400"
+            alt="Students learning web development"
+          />
+          <figcaption>Hands-on web development class in progress.</figcaption>
+        </figure>
+        <video controls>
+          <source src="sample-video.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </section>
+
+      <!-- HTML5 Form -->
+      <section>
+        <h2>Registration Form</h2>
+        <form action="#" method="post" autocomplete="on">
+          <!-- Personal Info -->
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="John Doe"
+              required
+              minlength="3"
+            />
+
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+
+            <label for="phone">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+233 123 456 789"
+              pattern="^\+?\d{1,3}\s?\d{3}\s?\d{3}\s?\d{3}$"
+              required
+            />
+          </fieldset>
+
+          <!-- Account Info -->
+          <fieldset>
+            <legend>Account Details</legend>
+            <label for="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              minlength="4"
+            />
+
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              minlength="6"
+            />
+
+            <label for="role">Select Role:</label>
+            <select id="role" name="role" required>
+              <option value="">--Select--</option>
+              <option value="student">Student</option>
+              <option value="teacher">Teacher</option>
+              <option value="admin">Administrator</option>
+            </select>
+          </fieldset>
+
+          <!-- Additional Info -->
+          <fieldset>
+            <legend>Additional Information</legend>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required />
+
+            <label for="website">Personal Website (optional):</label>
+            <input
+              type="url"
+              id="website"
+              name="website"
+              placeholder="https://example.com"
+            />
+
+            <label for="bio">Short Bio:</label>
+            <textarea
+              id="bio"
+              name="bio"
+              rows="4"
+              placeholder="Tell us a bit about yourself..."
+              minlength="10"
+            ></textarea>
+          </fieldset>
+
+          <!-- Buttons -->
+          <input type="submit" value="Register" />
+          <input type="reset" value="Clear" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Achilles. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
